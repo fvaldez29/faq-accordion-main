@@ -1,0 +1,134 @@
+@use 'base'
+@use 'phone'
+
+// Devices
+$mobile-size: 375px
+$desktop-size: 1440px
+
+// Colors
+
+$white: hsl(0, 0%, 100%)
+$light-pink: hsl(275, 100%, 97%)
+$grayish-purple: hsl(292, 16%, 49%)
+$dark-purple: hsl(292, 42%, 14%)
+
+// fonts-size 
+$fs: 16px
+
+// Font 
+$work-sans: 'worksans'
+$w400: 400
+$w600: 600
+$w700: 700
+    
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.header__container
+    width: 100%
+    height: 320px
+    background-image: url('../assets/images/background-pattern-desktop.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    
+
+main
+    position: relative
+    display: flex
+    justify-content: center
+    width: 100%
+    height: 100vh
+    background-color: $light-pink
+
+.card__container
+    position: absolute
+    top: -200px
+    width: 600px 
+    height: auto
+    background-color: $white
+    padding: 40px
+    border-radius: $fs
+
+    .title
+        display: flex
+        margin-bottom: 32px 
+
+    .star
+        margin-top: 10px
+        margin-right: 24px
+        width: 40px
+        height: 40px
+    
+    
+    h1
+        font-size: 56px
+        font-weight: $w700
+        font-family: $work-sans
+        color: $dark-purple
+
+.article
+    margin-top: 24px
+    border-bottom: 1px solid $light-pink
+    transition: all 320ms
+    
+     
+
+    button
+        font-size: 18px
+        font-family: $work-sans
+        color: $dark-purple
+        font-weight: $w600
+        border: none
+        background-color: $white
+
+    button:hover
+        color: #AD28EB
+        cursor: pointer
+
+    button:after
+            content: ''
+            display: inline-block
+            position: absolute
+            right: 0
+            background: url(../assets/images/icon-minus.svg) no-repeat 
+            width: 50px
+            height: 50px
+            float: right
+
+    .minus
+        cursor: pointer
+
+    p
+        margin: 24px 0
+        font-size: $fs
+        font-family: $work-sans
+        font-weight: $w400
+        color: $grayish-purple
+    
+.article__title.active
+        p
+            display: none
+        
+        :after
+            content: ''
+            display: inline-block
+            position: absolute
+            right: 0
+            background: url(../assets/images/icon-plus.svg) no-repeat 
+            width: 50px
+            height: 50px
+            float: right
+
+
+
+
+        
+    
+.no-border
+        border: none
+
+

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "worksans";
+  src: url(../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+  src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header__container {
+  width: 100%;
+  height: 320px;
+  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.card__container {
+  position: absolute;
+  top: -200px;
+  width: 600px;
+  height: auto;
+  background-color: hsl(0, 0%, 100%);
+  padding: 40px;
+  border-radius: 16px;
+}
+.card__container .title {
+  display: flex;
+  margin-bottom: 32px;
+}
+.card__container .star {
+  margin-top: 10px;
+  margin-right: 24px;
+  width: 40px;
+  height: 40px;
+}
+.card__container h1 {
+  font-size: 56px;
+  font-weight: 700;
+  font-family: "worksans";
+  color: hsl(292, 42%, 14%);
+}
+
+.article {
+  margin-top: 24px;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  transition: all 320ms;
+}
+.article button {
+  font-size: 18px;
+  font-family: "worksans";
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+}
+.article button:hover {
+  color: #AD28EB;
+  cursor: pointer;
+}
+.article button:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  background: url(../assets/images/icon-minus.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+.article .minus {
+  cursor: pointer;
+}
+.article p {
+  margin: 24px 0;
+  font-size: 16px;
+  font-family: "worksans";
+  font-weight: 400;
+  color: hsl(292, 16%, 49%);
+}
+
+.article__title.active p {
+  display: none;
+}
+.article__title.active :after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  background: url(../assets/images/icon-plus.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+.no-border {
+  border: none;
+}
+
+/*# sourceMappingURL=desktop.css.map */
